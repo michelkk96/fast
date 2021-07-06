@@ -1132,7 +1132,7 @@ export class Listbox extends FoundationElement {
     // @internal
     clickHandler(e: MouseEvent): boolean | void;
     disabled: boolean;
-    // @internal (undocumented)
+    // @internal
     get firstSelectedOption(): ListboxOption;
     // @internal (undocumented)
     protected focusAndScrollOptionIntoView(): void;
@@ -1141,7 +1141,6 @@ export class Listbox extends FoundationElement {
     handleTypeAhead: (key: string) => void;
     // @internal
     keydownHandler(e: KeyboardEvent): boolean | void;
-    // (undocumented)
     get length(): number;
     // @internal
     mousedownHandler(e: MouseEvent): boolean | void;
