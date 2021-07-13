@@ -1,4 +1,14 @@
 import { attr, observable, Observable } from "@microsoft/fast-element";
+import {
+    keyArrowDown,
+    keyArrowUp,
+    keyEnd,
+    keyEnter,
+    keyEscape,
+    keyHome,
+    keySpace,
+    keyTab,
+} from "@microsoft/fast-web-utilities";
 import uniqueId from "lodash-es/uniqueId";
 import { FoundationElement } from "../foundation-element";
 import { isListboxOption, ListboxOption } from "../listbox-option/listbox-option";
@@ -294,7 +304,7 @@ export class Listbox extends FoundationElement {
 
         switch (key) {
             // Select the first available option
-            case "Home": {
+            case keyHome: {
                 if (!e.shiftKey) {
                     e.preventDefault();
                     this.selectFirstOption();
@@ -303,7 +313,7 @@ export class Listbox extends FoundationElement {
             }
 
             // Select the next selectable option
-            case "ArrowDown": {
+            case keyArrowDown: {
                 if (!e.shiftKey) {
                     e.preventDefault();
                     this.selectNextOption();
@@ -312,7 +322,7 @@ export class Listbox extends FoundationElement {
             }
 
             // Select the previous selectable option
-            case "ArrowUp": {
+            case keyArrowUp: {
                 if (!e.shiftKey) {
                     e.preventDefault();
                     this.selectPreviousOption();
@@ -321,23 +331,23 @@ export class Listbox extends FoundationElement {
             }
 
             // Select the last available option
-            case "End": {
+            case keyEnd: {
                 e.preventDefault();
                 this.selectLastOption();
                 break;
             }
 
-            case "Tab": {
+            case keyTab: {
                 this.focusAndScrollOptionIntoView();
                 return true;
             }
 
-            case "Enter":
-            case "Escape": {
+            case keyEnter:
+            case keyEscape: {
                 return true;
             }
 
-            case " ": {
+            case keySpace: {
                 if (this.typeAheadExpired) {
                     return true;
                 }
