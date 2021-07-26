@@ -9,6 +9,7 @@ import {
 } from "@microsoft/fast-foundation";
 import { SystemColors } from "@microsoft/fast-web-utilities";
 import {
+    accentForegroundRest,
     controlCornerRadius,
     density,
     designUnit,
@@ -85,6 +86,13 @@ export const sliderStyles: (
     .thumb-cursor:active {
         background: ${neutralForegroundRest};
     }
+    .track-start {
+        background: ${accentForegroundRest};
+        position: absolute;
+        height: 100%;
+        left: 0;
+        border-radius: calc(${controlCornerRadius} * 1px);
+    }
     :host([orientation="horizontal"]) .thumb-container {
         transform: translateX(calc(var(--thumb-translate) * 1px));
     }
@@ -117,6 +125,11 @@ export const sliderStyles: (
         height: calc(var(--fast-slider-height) * 1px);
         min-height: calc(var(--thumb-size) * 1px);
         min-width: calc(${designUnit} * 20px);
+    }
+    :host([orientation="vertical"]) .track-start {
+        height: auto;
+        width: 100%;
+        top: 0;
     }
     :host([disabled]), :host([readonly]) {
         cursor: ${disabledCursor};
