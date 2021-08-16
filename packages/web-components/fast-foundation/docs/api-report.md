@@ -2263,7 +2263,23 @@ export type VerticalPosition = "top" | "bottom" | "unset";
 
 // @public
 export class VirtualizingStack extends FoundationElement {
-}
+    // @beta (undocumented)
+    autoUpdateMode: VirtualizingStackAutoUpdateMode;
+    // @internal (undocumented)
+    connectedCallback(): void;
+    // @internal (undocumented)
+    disconnectedCallback(): void;
+    // @internal
+    initialLayoutComplete: boolean;
+    update: () => void;
+    // @beta
+    viewport: string;
+    // @beta
+    viewportElement: HTMLElement | null;
+    }
+
+// @beta
+export type VirtualizingStackAutoUpdateMode = "resize-only" | "auto";
 
 // @public
 export const virtualizingStackTemplate: (context: ElementDefinitionContext, definition: FoundationElementDefinition) => ViewTemplate<VirtualizingStack>;
