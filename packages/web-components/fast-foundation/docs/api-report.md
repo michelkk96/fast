@@ -2262,6 +2262,13 @@ export function validateKey(key: any): void;
 export type VerticalPosition = "top" | "bottom" | "unset";
 
 // @public
+export class VirtualizingStack extends FoundationElement {
+}
+
+// @public
+export const virtualizingStackTemplate: (context: ElementDefinitionContext, definition: FoundationElementDefinition) => ViewTemplate<VirtualizingStack>;
+
+// @public
 export function whitespaceFilter(value: Node, index: number, array: Node[]): boolean;
 
 
