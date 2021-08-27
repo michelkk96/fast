@@ -2277,12 +2277,15 @@ export class VirtualizingStack extends FoundationElement {
     itemHeight: number;
     // (undocumented)
     items: any[];
+    // @internal (undocumented)
+    itemStackHeight: number;
     // (undocumented)
     itemTemplate: ViewTemplate;
     // @internal (undocumented)
     topSpacerHeight: number;
     // @internal (undocumented)
     totalHeight: number;
+    update(): void;
     // @beta
     viewport: string;
     // @beta
@@ -2292,7 +2295,7 @@ export class VirtualizingStack extends FoundationElement {
     }
 
 // @beta
-export type VirtualizingStackAutoUpdateMode = "resize-only" | "auto";
+export type VirtualizingStackAutoUpdateMode = "manual | resize-only" | "auto";
 
 // @public
 export const virtualizingStackTemplate: (context: ElementDefinitionContext, definition: FoundationElementDefinition) => ViewTemplate<VirtualizingStack>;
