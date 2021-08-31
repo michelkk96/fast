@@ -3,6 +3,7 @@ import {
     SiteNavigation,
     SiteNavigationItem,
 } from "@microsoft/fast-website";
+import "@microsoft/fast-website/src/app/css/base.css";
 import "@microsoft/fast-website/src/app/css/footer.css";
 import "@microsoft/fast-website/src/app/css/logo.css";
 import "@microsoft/fast-website/src/app/css/root.css";
@@ -17,7 +18,6 @@ export class Footer extends React.Component<{}, {}> {
         return (
             <fast-design-system-provider
                 class="site-wrapper"
-                use-defaults
                 dangerouslySetInnerHTML={{ __html: FooterTemplate() }}
             ></fast-design-system-provider>
         );
