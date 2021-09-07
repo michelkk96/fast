@@ -276,6 +276,10 @@ export const buttonTemplate: (context: ElementDefinitionContext, definition: But
 
 // @public
 export class Card extends FoundationElement {
+    // @internal (undocumented)
+    connectedCallback(): void;
+    // @internal (undocumented)
+    disconnectedCallback(): void;
 }
 
 // @public
@@ -2291,7 +2295,7 @@ export class VirtualizingStack extends FoundationElement {
     // @beta
     viewport: string;
     // @beta
-    viewportElement: HTMLElement | null;
+    viewportElement: HTMLElement;
     // @internal (undocumented)
     visibleItems: any[];
     }
