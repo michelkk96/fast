@@ -2282,7 +2282,7 @@ export class VirtualizingStack extends FoundationElement {
     // @beta (undocumented)
     itemHeight: number;
     // (undocumented)
-    items: any[];
+    items: object[];
     // @internal (undocumented)
     itemStackHeight: number;
     // (undocumented)
